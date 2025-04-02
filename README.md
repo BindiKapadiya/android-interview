@@ -504,6 +504,9 @@ this.lifecycleScope.launch {
 ## Common Question
  - `String` vs `StringBuilder`
  - `==` vs `.equals`?
+    - `==` Checks if two references point to the same object in memory. It compares `Memory address (Reference)`.
+    - `.equals` Checks if two objects are logically equal. It compares `Actual content (Values)`.
+
  - `===` vs `==`?
     - `==` Structural Equality means content should be same
     - `===` Referential Equality means both instances should be pointed to same pointer
