@@ -503,6 +503,15 @@ this.lifecycleScope.launch {
 
 ## Common Question
  - `String` vs `StringBuilder`
+    - `String`
+        - String is Immutable. Every modification creates a new object, increasing memory usage.
+        - Fixed text or small concatenations
+        - Thread-safe operations
+    - `StringBuilder`
+        - StringBuilder is Mutable. Performs better in loops and large string operations.
+        - No new objects are created; it modifies the original instance.
+        - Use in Large loops modifying text
+        - Use it when High performance required
  - `==` vs `.equals`?
     - `==` Checks if two references point to the same object in memory. It compares `Memory address (Reference)`.
     - `.equals` Checks if two objects are logically equal. It compares `Actual content (Values)`.
