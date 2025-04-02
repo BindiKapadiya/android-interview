@@ -48,6 +48,16 @@
    - Data classes cannot extend other classes
    - Supports destructuring declaration
 - Is singleton thread-safe? vs Object?
+    - Singleton
+      - Not inherently thread-safe; depends on implementation.
+      - A single shared instance across threads.
+      - Requires proper handling (e.g., synchronized, volatile, or static inner class).
+      - Performance is Poor if synchronized improperly.
+    - Object
+        - Not inherently thread-safe; depends on usage.
+        - Can have multiple instances, each thread may get its own.
+        - Needs explicit synchronization if shared across threads.
+        - Object creation is faster unless explicitly synchronized.
 - **What are the different types of scope functions?**
    - Let = `T.let { R }`
         - lambda result (R) is the return type
