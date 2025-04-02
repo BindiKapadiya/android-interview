@@ -86,6 +86,8 @@
         - Lifecycle-aware coroutine scope in Jetpack ViewModel, auto-cancels on ViewModel destruction.
     - `LifecycleScope`
         - (For Activities & Fragments) Cancels coroutines automatically when the lifecycle ends.
+    - `repeatOnLifecycle`
+        - Used to start and stop coroutines based on lifecycle state.
        
 - How to manage series and parallel execution?
 - Difference between Flow/SharedFlow/StateFlow and elaborate it.
