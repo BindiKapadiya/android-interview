@@ -507,6 +507,7 @@ this.lifecycleScope.launch {
  - `===` vs `==`?
     - `==` Structural Equality means content should be same
     - `===` Referential Equality means both instances should be pointed to same pointer
+      
       ```
       fun main() {
           var a = "Anil"
@@ -516,8 +517,8 @@ this.lifecycleScope.launch {
           a = b
           println(a==b) // true
           println(a===b) // true
-     }
-   ```
+        }
+
  - Java OOP concepts
  - What is `anagram` String ?
     - two strings are considered anagrams if they have the same characters with the same frequency, but the order of the characters is different. For example, `listen` and `silent` are anagrams because you can rearrange the letters in one to form the other.
