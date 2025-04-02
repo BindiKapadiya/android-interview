@@ -48,6 +48,8 @@
    - Data classes cannot extend other classes
    - Supports destructuring declaration
 - Is singleton thread-safe? vs Object?
+    - Singletons require careful handling to be thread-safe.
+    - Objects thread safety depends on how they are used.
 - **What are the different types of scope functions?**
    - Let = `T.let { R }`
         - lambda result (R) is the return type
