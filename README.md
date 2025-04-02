@@ -73,19 +73,18 @@
         - suitable for null check
           
 - What are the different Coroutine Scopes?
-  
     Coroutine Scopes control the lifetime of coroutines. Different scopes are used based on where and how you want to manage coroutines.
-    - GlobalScope
+    - `GlobalScope`
         - Coroutines live as long as the entire application runs.
         - Not lifecycle-aware (avoid if possible).
-    - CoroutineScope
+    - `CoroutineScope`
         - Used to create a local scope for coroutines.
         - Coroutines in this scope cancel together when the scope is canceled.
-    - runBlocking
+    - `runBlocking`
         - Blocks the thread until execution completes, used in testing.
-    - ViewModelScope
+    - `ViewModelScope`
         - Lifecycle-aware coroutine scope in Jetpack ViewModel, auto-cancels on ViewModel destruction.
-    - LifecycleScope
+    - `LifecycleScope`
         - (For Activities & Fragments) Cancels coroutines automatically when the lifecycle ends.
        
 - How to manage series and parallel execution?
