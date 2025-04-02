@@ -73,6 +73,7 @@
         - suitable for null check
           
 - What are the different Coroutine Scopes?
+  
     Coroutine Scopes control the lifetime of coroutines. Different scopes are used based on where and how you want to manage coroutines.
     - GlobalScope
         - Coroutines live as long as the entire application runs.
