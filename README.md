@@ -480,6 +480,34 @@ this.lifecycleScope.launch {
  - What is Dependency Inversion
  - Write a real-life example of Dependency Injection without using any library
  - Explain how Android Architecture components (ViewModel, LiveData, etc.) utilize design patterns behind the scenes
+    - `ViewModel` - Holds UI-related data, survives configuration changes
+        - ViewModel acts as the "middle layer" between the UI (View) and data sources (Model).
+        - It is retained across configuration changes (like screen rotation), ensuring that UI data survives.
+        - Implements Singleton-like behavior per Activity/Fragment using ViewModelProvider.
+        - ViewModelProvider caches ViewModels.
+        - If the UI is recreated, the same instance is returned instead of a new one.
+    - `LiveData` - Reactive UI updates when data changes
+        - LiveData implements the Observer Pattern, meaning UI components subscribe to data changes.
+        - It automatically updates observers (UI) when the data changes.
+        - observe() method attaches observers to LiveData.
+        - When data changes (setValue() or postValue()), all observers (UI components) are notified.
+        - Lifecycle-aware: Observers are automatically removed when the lifecycle is destroyed (avoiding memory leaks).
+    - `Repository` - Centralized data source management
+        - It abstracts data sources (Room, Firebase, API) and provides data to the ViewModel.
+        - Hides complex data fetching logic from ViewModel.
+        - Used in Clean Architecture to maintain a separation of concerns.
+    - `Room` - Database operations with abstraction
+        - Room is an ORM (Object-Relational Mapping) tool that provides an abstraction over SQLite.
+        - It uses DAO Pattern for database operations.
+    - `WorkManager` - Asynchronous background tasks
+        - WorkManager schedules and executes background tasks using a Command Pattern.
+        - Each WorkRequest defines a unit of work that can be executed later.
+    - `Navigation Components` - UI state management and navigation
+        - Navigation Component manages UI navigation states and back stack automatically.
+        - State changes (Fragments/Activities) are handled automatically.
+        - Back stack is managed without manual FragmentTransactions.
+
+    
 
 ## System Design
  - Design Image Loading Library
